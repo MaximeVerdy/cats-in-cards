@@ -1,3 +1,7 @@
+/*   color variables */
+$clr-white: rgba(255, 255, 255);
+$clr-grayMiddle: rgba(107, 107, 107, 0.853);
+
 .Modal {
      position: absolute;
      top: 50%;
@@ -8,7 +12,7 @@
      margin-right: -50%;
      transform: translate(-50%, -50%);
      padding: 1.5em;
-     background-color: rgba(255, 255, 255);
+     background-color: $clr-white;
 }
 
 .Overlay {
@@ -17,5 +21,5 @@
      left: 0;
      right: 0;
      bottom: 0;
-     background-color: rgba(107, 107, 107, 0.853);
+     background-color: $clr-grayMiddle;
 }
