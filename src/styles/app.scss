@@ -3,7 +3,7 @@
 /*   color variables */
 $clr-greyLight: #e1e5ee;
 $clr-grayDark: #4f546c;
-$clr-blueLight: #edfdff;
+$clr-orangeLight: #fdf5ed; 
 
 /*   border radius */
 $radius: 0.2rem;
@@ -21,6 +21,12 @@ body {
   color: $clr-grayDark;
 }
 
+h1 {
+  display: flex; 
+  justify-content: center;
+  padding: 2rem;
+}
+
 .wrapper {
   margin: 2rem;
   display: grid;
@@ -34,7 +40,7 @@ body {
   border-radius: $radius;
   min-width: 28rem;
   display: flex;
-  background: $clr-blueLight;
+  background: $clr-orangeLight;
 
   &__img {
     width: 14rem;
@@ -53,6 +59,10 @@ body {
   }
   &__description {
     line-height: 1.2rem;
+  }
+
+  &:hover {
+    transform: scale(1.06);
   }
 
 }
