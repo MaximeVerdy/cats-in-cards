@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap");
+
+/*   color variables */
+$clr-greyLight: #e1e5ee;
+$clr-grayDark: #4f546c;
+$clr-blueLight: #edfdff;
+
+/*   border radius */
+$radius: 0.2rem;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Noto Sans", sans-serif;
+  color: $clr-grayDark;
+}
+
+.wrapper {
+  margin: 2rem;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr;
+  justify-content: center;
+}
+
+.card {
+  box-shadow: 0 0 10px 5px $clr-greyLight;
+  border-radius: $radius;
+  min-width: 28rem;
+  display: flex;
+  background: $clr-blueLight;
+
+  &__img {
+    width: 14rem;
+    height: 11rem;
+    object-fit: cover;
+  }
+
+  &__body {
+    margin: 1rem;
+    flex-grow: 1;
+  }
+  &__title {
+    height: 3.1rem;
+    line-height: 1.4rem;
+    margin-bottom: 0.5rem;
+  }
+  &__description {
+    line-height: 1.2rem;
+  }
+
+}
+
+@media screen and (min-width: 600px) {
+  .wrapper {
+    grid-template-columns: repeat(auto-fit, minmax(14rem, 16rem));
+  }
+
+  .card {
+    flex-direction: column;
+    text-align: center;
+    min-width: 14rem;
+
+    &__img {
+      width: 100%;
+      height: 12rem;
+    }
+  }
+}
