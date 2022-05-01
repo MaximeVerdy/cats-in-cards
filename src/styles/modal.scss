@@ -1,25 +1,37 @@
 /*   color variables */
-$clr-white: rgba(255, 255, 255);
-$clr-grayMiddle: rgba(107, 107, 107, 0.853);
+$clr-greyBoxShadow: #3E3E3E;
+$clr-greyBGModal: #525252bc;
+$clr-whiteBGButton: #FFF;
+$clr-OrangeButton: #cc6e2f;
 
-.Modal {
-     position: absolute;
+.modal {
+     position: fixed;
      top: 50%;
      left: 50%;
      right: auto;
-     max-width: 600px;
+     width: 600px;
      bottom: auto;
      margin-right: -50%;
      transform: translate(-50%, -50%);
-     padding: 1.5em;
-     background-color: $clr-white;
+     padding: 2.2em 2.5em 3em 2.5em;
+     border: 0;
+     box-shadow: 0.1em 0.1em 1em $clr-greyBoxShadow;
 }
 
-.Overlay {
-     position: fixed;
-     top: 0;
-     left: 0;
-     right: 0;
-     bottom: 0;
-     background-color: $clr-grayMiddle;
+.modal::backdrop {
+     background: $clr-greyBGModal;
+}
+
+.button {
+     border: none;
+     outline: none;
+     position: absolute;
+     right: 0.6em;
+     bottom: 0.6em;
+     cursor: pointer;
+     font-weight: 550;
+     font-size: 1.1em;
+     color: $clr-OrangeButton;
+     padding: 0.5em;
+     background: $clr-whiteBGButton;
 }

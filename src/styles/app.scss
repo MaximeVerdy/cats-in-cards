@@ -1,12 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap");
 
 /*   color variables */
-$clr-greyLight: #e1e5ee;
-$clr-grayDark: #4f546c;
-$clr-orangeLight: #fdf5ed;
-
-/*   border radius */
-$radius: 0.2rem;
+$clr-greyShadowCard: #e1e5ee;
+$clr-grayFont: #4f546c;
+$clr-orangeBGCard: #fe813805;
 
 *,
 *::before,
@@ -18,11 +15,11 @@ $radius: 0.2rem;
 
 body {
   font-family: "Noto Sans", sans-serif;
-  color: $clr-grayDark; 
+  color: $clr-grayFont;
 }
 
 h1 {
-  display: flex; 
+  display: flex;
   justify-content: center;
   padding: 2rem;
 }
@@ -36,11 +33,11 @@ h1 {
 }
 
 .card {
-  box-shadow: 0 0 10px 5px $clr-greyLight;
-  border-radius: $radius;
+  box-shadow: 0 0 10px 5px $clr-greyShadowCard;
+  border-radius: 0.8rem;
   min-width: 28rem;
   display: flex;
-  background: $clr-orangeLight;
+  background: $clr-orangeBGCard;
 
   &__img {
     width: 14rem;
@@ -52,11 +49,13 @@ h1 {
     margin: 1rem;
     flex-grow: 1;
   }
+
   &__title {
     height: 3.1rem;
     line-height: 1.4rem;
     margin-bottom: 0.5rem;
   }
+
   &__description {
     line-height: 1.2rem;
     height: 2.3rem;
@@ -68,7 +67,7 @@ h1 {
 
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 609px) {
   .wrapper {
     grid-template-columns: repeat(auto-fit, minmax(14rem, 16rem));
   }
