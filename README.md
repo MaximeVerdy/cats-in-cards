@@ -1,10 +1,11 @@
-### Application React/SASS donnant des informations sur les chats
+### Application React.js/SASS donnant des informations sur les chats
+*Le même projet a été fait en React : https://github.com/MaximeVerdy/cats-in-cards-in-vue2*
 
-* Les informations sont fetchées sur Cat Fact API
+* Les informations sont fetchées sur https://catfact.ninja
 * Le style et le responsive sont fait en sass
-     * Quand la souris survole une card, celle-ci est zoomée
+     * Quand la souris survole une card, celle-ci est agrandie
      * Le nombre de cards par ligne s'adapte à la largeur de l'écran
-* La modal est faite avec la library react-modal
+* La modal est faite en sass
      * En cliquant sur n'importe quelle card, une information aléatoire sur les chats apparait dans une modal
 
-![screenshot](./public/screenshot.gif)
+![screenshot](screenshot.gif)
