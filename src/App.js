@@ -4,7 +4,7 @@ import Modal from 'react-modal';
 import './styles/app.scss';
 import './styles/modal.scss';
 
-import Card from './components/Card'
+import CatCard from './components/CatCard'
 import catImage from './assets/shadow-cat.jpg'
 
 function App() {
@@ -16,18 +16,25 @@ function App() {
 
   useEffect(() => {
     const findCats = async () => {
-      const data = await fetch('https://catfact.ninja/breeds')
-      const body = await data.json()
-      setCatsArray(body.data)
+      const data = await fetch('https://catfact.ninja/breeds');
+      const body = await data.json();
+      setCatsArray(body.data);
     }
     findCats()
+    .catch(e => 
+      console.error(e)
+    );
   }, [])
 
   const handleClick = async () => {
-    const data = await fetch('https://catfact.ninja/fact')
-    const body = await data.json()
-    setRandomFact(body.fact)
-    setIsOpen(true)
+    try {
+      const data = await fetch("https://catfact.ninja/fact");
+      const body = await data.json();
+      setRandomFact(body.fact);
+      setIsOpen(true);
+    } catch (e) {
+      console.error(e);
+    }
   }
 
   function closeModal() {
@@ -38,15 +45,12 @@ function App() {
     <div
       key={i}
       onClick={() => handleClick()}
-
     >
-      <Card
+      <CatCard
         img={catImage}
         title={cat.breed}
-        country={'from ' + cat.country}
         coat={cat.coat + ' coat'}
         pattern={cat.pattern + ' pattern'}
-        onClick={() => handleClick()}
       />
     </div>
   ))
