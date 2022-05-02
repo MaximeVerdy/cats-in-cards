@@ -3,10 +3,10 @@
 *Le même projet a été fait en Vue/Vuetify : https://github.com/MaximeVerdy/cats-in-cards-in-vue-vuetify*   
 
 * Les informations sont fetchées sur https://catfact.ninja
-* Le style et le responsive sont fait en sass
+* Le style et le responsive sont fait en SASS
      * Quand la souris survole une card, celle-ci est agrandie
      * Le nombre de cards par ligne s'adapte à la largeur de l'écran
-* La modal est faite en sass
+* La modal est faite en SASS
      * En cliquant sur n'importe quelle card, une information aléatoire sur les chats apparait dans une modal
 
 ![screenshot](screenshot.gif)
