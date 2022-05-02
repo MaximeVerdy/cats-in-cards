@@ -45,7 +45,7 @@ function App() {
 
       <dialog className="modal" id="modal">
         <p>{fact}</p>
-        <button className="button close-button" onClick={() => closeModal()}>close</button>
+        <button className="button" onClick={() => closeModal()}>close</button>
       </dialog>
 
       <h1>
